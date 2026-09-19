@@ -1,75 +1,114 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Newsletter Sign-up Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive newsletter sign-up form built with **React, TypeScript, and Tailwind CSS** as part of a Frontend Mentor challenge.
 
-Currently, two official plugins are available:
+Users can enter their email address, submit the form, receive validation feedback for invalid emails, and see a success message after successfully subscribing.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Responsive design for mobile and desktop screens
+- Email input with React state
+- Client-side email validation
+- Error message for invalid email addresses
+- Success message after valid submission
+- Displays the submitted email in the success message
+- Dismiss button to return to the sign-up form
+- Responsive mobile and desktop illustrations
+- Interactive input and button states
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Built With
 
-## Expanding the ESLint configuration
+- **React** – Component-based UI and state management
+- **TypeScript** – Type safety and component props
+- **Tailwind CSS** – Responsive styling and layout
+- **Vite** – Development and build tooling
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## React Concepts Practiced
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This project helped me practice:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- `useState`
+- Controlled inputs
+- Form submission
+- Form validation
+- Conditional rendering
+- Props
+- Callback functions
+- Passing data between components
+- Component-based architecture
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## How It Works
 
+The application initially displays the newsletter sign-up form.
+
+When a user enters an email address and submits the form, the email is validated.
+
+If the email address is invalid, an error message is displayed and the user remains on the form.
+
+If the email address is valid, it is stored in the application state and the success message is displayed.
+
+The submitted email is then shown in the confirmation message.
+
+Clicking **Dismiss message** returns the user to the sign-up form and resets the application state.
+
+## Project Structure
+
+```text
+src/
+├── components/
+│   ├── Form.tsx
+│   └── Success.tsx
+├── App.tsx
+├── main.tsx
+└── index.css
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Make sure you have **Node.js** installed on your computer.
 
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/jzzmiiinn/Newsletter-sign-up-form-with-success-message.git
 ```
+
+Navigate to the project directory:
+
+```bash
+cd Newsletter-sign-up-form-with-success-message
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL provided by Vite in your browser.
+
+## What I Learned
+
+Through this project, I practiced building a form with React and TypeScript, managing user input with state, validating form data, and conditionally rendering different components based on application state.
+
+I also practiced passing data and callback functions between components and creating responsive layouts using Tailwind CSS.
+
+## Challenge
+
+This project was built as part of a challenge from **Frontend Mentor**, which provides realistic projects to help developers improve their frontend development skills.
+
+## Author
+
+**Yasmin Ali**
+
+- GitHub: [@jzzmiiinn](https://github.com/jzzmiiinn)
